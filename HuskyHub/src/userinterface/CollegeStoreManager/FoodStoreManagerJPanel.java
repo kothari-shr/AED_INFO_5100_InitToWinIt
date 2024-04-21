@@ -425,7 +425,7 @@ public class FoodStoreManagerJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }// GEN-LAST:event_backBtnActionPerformed
 
-    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_delBtnActionPerformed
+    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         int selectedRow = menuTbl.getSelectedRow();
         if (selectedRow < 0) {
@@ -433,12 +433,12 @@ public class FoodStoreManagerJPanel extends javax.swing.JPanel {
             return;
         } else {
             Items item = (Items) menuTbl.getValueAt(selectedRow, 0);
-            enterprise.deleteItem(item);
+            enterprise.deleteFoodItem(item);
             JOptionPane.showMessageDialog(null, "Item deleted successfully.", "Success",
                     JOptionPane.INFORMATION_MESSAGE);
             populateTable();
         }
-    }// GEN-LAST:event_delBtnActionPerformed
+    }
 
     private void itemNameTxtKeyReleased(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_itemNameTxtKeyReleased
         // TODO add your handling code here:
@@ -514,7 +514,7 @@ public class FoodStoreManagerJPanel extends javax.swing.JPanel {
             String name = itemNameTxt.getText();
             String type = (String) typeComboBox.getSelectedItem();
             int price = Integer.parseInt(priceTxt.getText());
-            Items s = enterprise.createMenuItem();
+            Items s = enterprise.createFoodMenu();
             s.setItemName(name);
             s.setItemType(type);
             s.setPrice(price);

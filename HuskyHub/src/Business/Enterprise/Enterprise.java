@@ -23,7 +23,7 @@ public abstract class Enterprise extends Organization {
     private ArrayList<Items> itemsList;
     private ArrayList<ServiceTypes> serviceTypeList;
     private ArrayList<Items> foodInventoryList;
-    private ArrayList<Items> stationaryInventoryList;
+    private ArrayList<Items> stationeryInventoryList;
     
     public Enterprise(String name, EnterpriseType type) {
         super(name);
@@ -31,6 +31,8 @@ public abstract class Enterprise extends Organization {
         this.itemsList = new ArrayList<>();
         this.serviceTypeList = new ArrayList<>();
         organizationDirectory = new OrganizationDirectory();
+        foodInventoryList=new ArrayList<>();
+        stationeryInventoryList=new ArrayList<>();
     }
 
     public OrganizationDirectory getOrganizationDirectory() {
@@ -108,5 +110,33 @@ public abstract class Enterprise extends Organization {
 
     public void deleteItem(Items item) {
         itemsList.remove(item);
+    }
+
+    public ArrayList<Items> getFoodInventoryList() {
+        return foodInventoryList;
+    }
+
+    public ArrayList<Items> getStationeryInventoryList() {
+        return stationeryInventoryList;
+    }
+    
+    public Items createFoodMenu(){
+        Items i= new Items();
+        this.foodInventoryList.add(i);
+        return i;
+    }
+    
+    public void deleteFoodItem(Items item) {
+        foodInventoryList.remove(item);
+    }
+    
+    public void deleteStationeryItem(Items item) {
+        stationeryInventoryList.remove(item);
+    }
+    
+    public Items createStationeryMenu(){
+        Items i= new Items();
+        this.stationeryInventoryList.add(i);
+        return i;
     }
 }

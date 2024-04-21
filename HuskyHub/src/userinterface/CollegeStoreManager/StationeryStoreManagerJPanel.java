@@ -59,7 +59,6 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         menuTbl = new javax.swing.JTable();
-        delBtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -69,6 +68,7 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
         priceTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         quantityTxt = new javax.swing.JTextField();
+        delBtn = new javax.swing.JButton();
         addBtn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -198,16 +198,6 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(menuTbl);
 
-        delBtn.setBackground(new java.awt.Color(204, 204, 204));
-        delBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        delBtn.setForeground(new java.awt.Color(51, 51, 51));
-        delBtn.setText("Delete");
-        delBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                delBtnActionPerformed(evt);
-            }
-        });
-
         jPanel4.setBackground(new java.awt.Color(30, 130, 130));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
@@ -309,6 +299,16 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
+        delBtn.setBackground(new java.awt.Color(204, 204, 204));
+        delBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        delBtn.setForeground(new java.awt.Color(51, 51, 51));
+        delBtn.setText("Delete");
+        delBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delBtnActionPerformed(evt);
+            }
+        });
+
         addBtn.setBackground(new java.awt.Color(204, 204, 204));
         addBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         addBtn.setForeground(new java.awt.Color(51, 51, 51));
@@ -328,30 +328,26 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE))
-                .addGap(58, 58, 58)
+                .addGap(75, 75, 75)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(addBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(delBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(131, 131, 131))
+                    .addComponent(addBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(delBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(114, 114, 114))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(delBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(17, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112))))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addComponent(delBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113))
         );
 
         tabbedPaneCustom1.addTab("Manage Inventory", jPanel3);
@@ -431,10 +427,6 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_processJButtonActionPerformed
 
-    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_delBtnActionPerformed
-
     public void populateTable() {
         DefaultTableModel dtm = (DefaultTableModel) delManTbl.getModel();
         dtm.setRowCount(0);
@@ -456,7 +448,7 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
         DefaultTableModel dtm = (DefaultTableModel) menuTbl.getModel();
         dtm.setRowCount(0);
 
-        for (Items store : enterprise.getItemsList()) {
+        for (Items store : enterprise.getStationeryInventoryList()) {
             Object row[] = new Object[4];
             row[0] = store;
             row[1] = store.getItemType();
@@ -478,14 +470,74 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_quantityTxtKeyReleased
 
-    private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addBtnActionPerformed
-
     private void tabbedPaneCustom1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabbedPaneCustom1MouseClicked
         // TODO add your handling code here:
 
     }//GEN-LAST:event_tabbedPaneCustom1MouseClicked
+
+    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = menuTbl.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else {
+            Items item = (Items) menuTbl.getValueAt(selectedRow, 0);
+            enterprise.deleteStationeryItem(item);
+            JOptionPane.showMessageDialog(null, "Item deleted successfully.", "Success",
+                    JOptionPane.INFORMATION_MESSAGE);
+            populateTable();
+        }
+    }//GEN-LAST:event_delBtnActionPerformed
+
+    private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
+        // TODO add your handling code here:
+        if (isValidInput()) {
+            for (Items item : enterprise.getStationeryInventoryList()) {
+                if (itemNameTxt.getText().equals(item.getItemName())) {
+
+                    JOptionPane.showMessageDialog(null, "Item already exists.", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+            }
+            if (itemNameTxt.getText().equals("") || itemNameTxt.getText() == null) {
+                JOptionPane.showMessageDialog(null, "Field(s) cannot be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (!itemNameTxt.getText().matches("^[a-zA-Z0-9 ]*$")) {
+                JOptionPane.showMessageDialog(null, "Invalid Item Name.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            try {
+                Double.parseDouble(priceTxt.getText());
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Invalid Price.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (Double.parseDouble(priceTxt.getText()) <= 0) {
+                JOptionPane.showMessageDialog(null, "Price should be greater than zero.", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            String name = itemNameTxt.getText();
+            String type = (String) typeComboBox.getSelectedItem();
+            int price = Integer.parseInt(priceTxt.getText());
+            Items s = enterprise.createStationeryMenu();
+            s.setItemName(name);
+            s.setItemType(type);
+            s.setPrice(price);
+            JOptionPane.showMessageDialog(null, "Item Added Successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            populateTable();
+            itemNameTxt.setText("");
+            priceTxt.setText("");
+            typeComboBox.setSelectedIndex(0);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Please enter all the required fields correctly!", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_addBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -514,4 +566,17 @@ public class StationeryStoreManagerJPanel extends javax.swing.JPanel {
     private userinterface.tabbedPaneCustom.TabbedPaneCustom tabbedPaneCustom1;
     private javax.swing.JComboBox<String> typeComboBox;
     // End of variables declaration//GEN-END:variables
+
+    public boolean isValidInput(){
+        return typeComboBox.getSelectedItem()!=null && isText(itemNameTxt.getText()) && isNumber(priceTxt.getText())
+                && isNumber(quantityTxt.getText());
+    }
+    
+    public boolean isText(String name) {
+        return name.matches("^[a-zA-Z0-9 ]*$");
+    }
+
+    public boolean isNumber(String name) {
+        return name.matches("^[0-9]*$");
+    }
 }
