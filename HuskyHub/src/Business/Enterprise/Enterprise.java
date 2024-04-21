@@ -43,21 +43,12 @@ public abstract class Enterprise extends Organization {
 
     public enum EnterpriseType {
 
-<<<<<<< HEAD
-        DietUnit("Diet Unit"),
-        TrainerUnit("Trainer Unit"),
-        DoctorUnit("Doctor Unit"),
-        DormInventoryUnit("Dorm Inventory Unit"),
-        MaintenanceUnit("Maintenance Unit"),
-        CollegeStore("College Store");
-=======
         NourishmentEnterprise("Nourishment Enterprise"),
         GymHelperEnterprise("Gym Helper Enterprise"),
         HealthConsultantEnterprise("Health Consultant Enterprise"),
         UniversityHousingEnterprise("University Housing Enterprise"),
         HousingRepairEnterprise("Housing Repair Enterprise"),
         CollegeStoreEnterprise("College Store Enterprise");
->>>>>>> origin/dev
 
         private String value;
 
