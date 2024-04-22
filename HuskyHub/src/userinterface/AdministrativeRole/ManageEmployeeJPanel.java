@@ -12,10 +12,12 @@ import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import Business.utilities.tableHeaderColors;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -49,12 +51,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     }
 
     public void clearLabels() {
-        passwordSuccessLbl.setVisible(false);
         passwordLbl.setVisible(false);
-        emailSuccessLbl.setVisible(false);
         emailIDAlreadyLbl.setVisible(false);
         emailLbl.setVisible(false);
-        citySuccessLbl.setVisible(false);
         cityLbl.setVisible(false);
     }
 
@@ -156,21 +155,16 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         emailIDAlreadyLbl = new javax.swing.JLabel();
-        emailSuccessLbl = new javax.swing.JLabel();
         emailLbl = new javax.swing.JLabel();
         cityLbl = new javax.swing.JLabel();
-        citySuccessLbl = new javax.swing.JLabel();
         passwordLbl = new javax.swing.JLabel();
-        passwordSuccessLbl = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         passwordJTextField = new javax.swing.JPasswordField();
         enterpriseLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        organizationJTable.setBackground(new java.awt.Color(204, 204, 204));
+        organizationJTable.setBackground(new java.awt.Color(204, 255, 204));
         organizationJTable.setForeground(new java.awt.Color(51, 51, 51));
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -206,9 +200,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 380, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 380, 170));
 
-        organizationJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        organizationJComboBox.setBackground(new java.awt.Color(204, 255, 204));
         organizationJComboBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         organizationJComboBox.setForeground(new java.awt.Color(51, 51, 51));
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -217,12 +211,13 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 organizationJComboBoxActionPerformed(evt);
             }
         });
-        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 190, 30));
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 190, 30));
 
+        jLabel1.setBackground(new java.awt.Color(102, 255, 255));
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setText("Organization:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 78, 25));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 78, 25));
 
         backJButton.setBackground(new java.awt.Color(102, 255, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -235,7 +230,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         });
         add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 31));
 
-        organizationEmpJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        organizationEmpJComboBox.setBackground(new java.awt.Color(204, 255, 204));
         organizationEmpJComboBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         organizationEmpJComboBox.setForeground(new java.awt.Color(51, 51, 51));
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -244,33 +239,36 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 organizationEmpJComboBoxActionPerformed(evt);
             }
         });
-        add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 190, 30));
+        add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 190, 30));
 
+        jLabel3.setBackground(new java.awt.Color(102, 255, 255));
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Organization:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, 40));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, 40));
 
+        jLabel4.setBackground(new java.awt.Color(102, 255, 255));
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Role:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 72, 40));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 72, 40));
 
-        roleJComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        roleJComboBox.setBackground(new java.awt.Color(204, 255, 204));
         roleJComboBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         roleJComboBox.setForeground(new java.awt.Color(51, 51, 51));
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 190, 30));
+        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 190, 30));
 
+        jLabel5.setBackground(new java.awt.Color(102, 255, 255));
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Email ID:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, 70, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 70, 30));
 
-        txtUserName.setBackground(new java.awt.Color(204, 204, 204));
+        txtUserName.setBackground(new java.awt.Color(204, 255, 204));
         txtUserName.setForeground(new java.awt.Color(51, 51, 51));
         txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,13 +280,14 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 txtUserNameKeyReleased(evt);
             }
         });
-        add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 190, 30));
+        add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 190, 30));
 
+        jLabel6.setBackground(new java.awt.Color(102, 255, 255));
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setForeground(new java.awt.Color(102, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Password:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 480, 70, 10));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 70, 10));
 
         createUserJButton.setBackground(new java.awt.Color(102, 255, 255));
         createUserJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -299,19 +298,19 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 createUserJButtonActionPerformed(evt);
             }
         });
-        add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, 87, 44));
+        add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 87, 44));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Add Employees");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 302, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 302, 30));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("View Employees");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 390, 31));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 390, 31));
 
         btnRemove.setBackground(new java.awt.Color(102, 255, 255));
         btnRemove.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -322,15 +321,16 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 btnRemoveActionPerformed(evt);
             }
         });
-        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 540, 113, 44));
+        add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, 113, 44));
 
+        jLabel8.setBackground(new java.awt.Color(102, 255, 255));
         jLabel8.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setForeground(new java.awt.Color(102, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Name:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 72, 30));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 72, 30));
 
-        txtName.setBackground(new java.awt.Color(204, 204, 204));
+        txtName.setBackground(new java.awt.Color(204, 255, 204));
         txtName.setForeground(new java.awt.Color(51, 51, 51));
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,56 +342,43 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 txtNameKeyReleased(evt);
             }
         });
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 190, 30));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 190, 30));
 
         emailIDAlreadyLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        emailIDAlreadyLbl.setForeground(new java.awt.Color(102, 255, 255));
+        emailIDAlreadyLbl.setForeground(new java.awt.Color(255, 0, 51));
         emailIDAlreadyLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         emailIDAlreadyLbl.setText("EmailID already Exists");
-        add(emailIDAlreadyLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 160, 20));
-
-        emailSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(emailSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 30, 50));
+        add(emailIDAlreadyLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 160, 20));
 
         emailLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        emailLbl.setForeground(new java.awt.Color(102, 255, 255));
+        emailLbl.setForeground(new java.awt.Color(255, 0, 51));
         emailLbl.setText("Valid Format - 'xx@xx.xx'");
-        add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 150, 20));
+        add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 150, 20));
 
         cityLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        cityLbl.setForeground(new java.awt.Color(102, 255, 255));
+        cityLbl.setForeground(new java.awt.Color(255, 0, 51));
         cityLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cityLbl.setText("Only Alphabets are allowed");
-        add(cityLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 160, 20));
-
-        citySuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(citySuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 30, 30));
+        add(cityLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 160, 20));
 
         passwordLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        passwordLbl.setForeground(new java.awt.Color(102, 255, 255));
+        passwordLbl.setForeground(new java.awt.Color(255, 0, 51));
         passwordLbl.setText("Sample format: Asdf@1");
-        add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 500, 160, 10));
+        add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 160, 10));
 
-        passwordSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(passwordSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 30, 30));
-
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 10, 320));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 810, 10));
-
-        passwordJTextField.setBackground(new java.awt.Color(204, 204, 204));
+        passwordJTextField.setBackground(new java.awt.Color(204, 255, 204));
         passwordJTextField.setForeground(new java.awt.Color(51, 51, 51));
         passwordJTextField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 passwordJTextFieldKeyReleased(evt);
             }
         });
-        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 190, 30));
+        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 190, 30));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         enterpriseLabel.setForeground(new java.awt.Color(102, 255, 255));
-        enterpriseLabel.setText("Manage Organization Employees");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 410, 30));
+        enterpriseLabel.setText("Organization Employees");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 410, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -432,9 +419,6 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                         txtUserName.setText("");
                         passwordJTextField.setText("");
                         txtName.setText("");
-                        citySuccessLbl.setVisible(false);
-                        emailSuccessLbl.setVisible(false);
-                        passwordSuccessLbl.setVisible(false);
                     } else {
                         JOptionPane.showMessageDialog(null, "Username already exists", "Warning", JOptionPane.WARNING_MESSAGE);
                         txtUserName.setText("");
@@ -485,26 +469,27 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
         if (!usernamePatternCorrect(txtUserName.getText()) && !(txtUserName.getText().isEmpty())) {
-            emailSuccessLbl.setVisible(false);
             emailIDAlreadyLbl.setVisible(false);
             emailLbl.setVisible(true);
             userNameValid = false;
+            nonAcceptableInput(txtUserName);
         } else if (!organization.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())) {
-            emailSuccessLbl.setVisible(false);
             emailIDAlreadyLbl.setVisible(true);
             emailLbl.setVisible(false);
             userNameValid = false;
+            nonAcceptableInput(txtUserName);
 
         } else if (txtUserName.getText().isEmpty()) {
-            emailSuccessLbl.setVisible(false);
             emailIDAlreadyLbl.setVisible(false);
             emailLbl.setVisible(false);
             userNameValid = false;
+            nonAcceptableInput(txtUserName);
+
         } else {
-            emailSuccessLbl.setVisible(true);
             emailIDAlreadyLbl.setVisible(false);
             emailLbl.setVisible(false);
             userNameValid = true;
+            acceptableInput(txtUserName);
         }
     }//GEN-LAST:event_txtUserNameKeyReleased
 
@@ -530,17 +515,19 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private void txtNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyReleased
         // TODO add your handling code here:
         if (!cityPatternCorrect(txtName.getText()) && !(txtName.getText().isEmpty())) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(true);
             nameValid = false;
+            nonAcceptableInput(txtName);
         } else if (txtName.getText().isEmpty()) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(false);
             nameValid = false;
+            nonAcceptableInput(txtName);
+
         } else {
             nameValid = true;
             cityLbl.setVisible(false);
-            citySuccessLbl.setVisible(true);
+            acceptableInput(txtName);
+
         }
     }//GEN-LAST:event_txtNameKeyReleased
 
@@ -551,26 +538,34 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private void passwordJTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordJTextFieldKeyReleased
         // TODO add your handling code here:
         if (!passwordPatternCorrect(passwordJTextField.getText()) && !(passwordJTextField.getText().isEmpty())) {
-            passwordSuccessLbl.setVisible(false);
             passwordLbl.setVisible(true);
+            nonAcceptableInput(passwordJTextField);
         } else if (passwordJTextField.getText().isEmpty()) {
             passwordLbl.setVisible(false);
-            passwordSuccessLbl.setVisible(false);
+            nonAcceptableInput(passwordJTextField);
+
         } else {
             passwordLbl.setVisible(false);
-            passwordSuccessLbl.setVisible(true);
+             acceptableInput(passwordJTextField);
+
         }
     }//GEN-LAST:event_passwordJTextFieldKeyReleased
 
+    private void acceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(204,255,204));
+    }
+    
+    private void nonAcceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(255,153,153));
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel cityLbl;
-    private javax.swing.JLabel citySuccessLbl;
     private javax.swing.JButton createUserJButton;
     private javax.swing.JLabel emailIDAlreadyLbl;
     private javax.swing.JLabel emailLbl;
-    private javax.swing.JLabel emailSuccessLbl;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -581,14 +576,11 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JComboBox organizationEmpJComboBox;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JTable organizationJTable;
     private javax.swing.JPasswordField passwordJTextField;
     private javax.swing.JLabel passwordLbl;
-    private javax.swing.JLabel passwordSuccessLbl;
     private javax.swing.JComboBox roleJComboBox;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtUserName;

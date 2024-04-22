@@ -64,7 +64,7 @@ public class DeliveryManAssignJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Assign Deliveryman");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 310, 37));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 310, 37));
 
         backBtn.setBackground(new java.awt.Color(102, 255, 255));
         backBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
@@ -75,20 +75,20 @@ public class DeliveryManAssignJPanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 82, 37));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 82, 37));
 
         jLabel3.setBackground(new java.awt.Color(102, 255, 255));
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Deliveryman:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 80, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 80, -1));
 
-        deliveryManCmbBox.setBackground(new java.awt.Color(204, 204, 204));
+        deliveryManCmbBox.setBackground(new java.awt.Color(204, 255, 204));
         deliveryManCmbBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         deliveryManCmbBox.setForeground(new java.awt.Color(51, 51, 51));
         deliveryManCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(deliveryManCmbBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 150, 30));
+        add(deliveryManCmbBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 150, 30));
 
         appointDelManBtn.setBackground(new java.awt.Color(102, 255, 255));
         appointDelManBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
@@ -99,7 +99,7 @@ public class DeliveryManAssignJPanel extends javax.swing.JPanel {
                 appointDelManBtnActionPerformed(evt);
             }
         });
-        add(appointDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 95, 36));
+        add(appointDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 95, 36));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

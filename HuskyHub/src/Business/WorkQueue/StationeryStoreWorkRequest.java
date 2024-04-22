@@ -11,22 +11,29 @@ import java.util.ArrayList;
  *
  * @author spkot
  */
-public class StationeryStoreWorkRequest extends WorkRequest{
+public class StationeryStoreWorkRequest extends WorkRequest {
+
     ArrayList<Items> stationeryRequestList;
-    
-    public StationeryStoreWorkRequest(){
-        stationeryRequestList=new ArrayList<>();
+    private int totalBill = 0;
+
+    public StationeryStoreWorkRequest() {
+        stationeryRequestList = new ArrayList<>();
     }
 
     public ArrayList<Items> getStationeryRequestList() {
         return stationeryRequestList;
     }
 
-    public int getTotalBill() {
-        int sum = 0;
-        for (Items i : stationeryRequestList) {
-            sum += i.getPrice() * i.getQuantity();
-        }
-        return sum;
+    public void setStationeryRequestList(ArrayList<Items> l) {
+        stationeryRequestList = l;
     }
+
+    public int getTotalBill() {
+        return totalBill;
+    }
+
+    public void setTotalBill(int totalBill) {
+        this.totalBill = totalBill;
+    }
+
 }

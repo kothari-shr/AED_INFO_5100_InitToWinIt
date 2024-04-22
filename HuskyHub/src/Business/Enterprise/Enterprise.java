@@ -9,6 +9,7 @@ import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Store.Items;
 import Business.Inventory.DormInventoryDirectory;
+import com.db4o.collections.ActivatableArrayList;
 import java.util.ArrayList;
 
 /**
@@ -22,8 +23,10 @@ public abstract class Enterprise extends Organization {
     private DormInventoryDirectory dormInventoryDirectory;
     private ArrayList<Items> itemsList;
     private ArrayList<ServiceTypes> serviceTypeList;
-    private ArrayList<Items> foodInventoryList;
-    private ArrayList<Items> stationeryInventoryList;
+    protected ArrayList<Items> foodInventoryList = new ArrayList<>();
+    protected ArrayList<Items> stationeryInventoryList = new ArrayList<>();
+
+    ;
     
     public Enterprise(String name, EnterpriseType type) {
         super(name);
@@ -31,8 +34,8 @@ public abstract class Enterprise extends Organization {
         this.itemsList = new ArrayList<>();
         this.serviceTypeList = new ArrayList<>();
         organizationDirectory = new OrganizationDirectory();
-        foodInventoryList=new ArrayList<>();
-        stationeryInventoryList=new ArrayList<>();
+        foodInventoryList = new ArrayList<>();
+        stationeryInventoryList = new ArrayList<>();
     }
 
     public OrganizationDirectory getOrganizationDirectory() {
@@ -120,22 +123,30 @@ public abstract class Enterprise extends Organization {
         return stationeryInventoryList;
     }
     
-    public Items createFoodMenu(){
-        Items i= new Items();
+    public void setFoodInventoryList(ArrayList<Items> l){
+        foodInventoryList=l;
+    }
+    
+    public void setStationeryInventoryList(ArrayList<Items> l){
+        stationeryInventoryList=l;
+    }
+
+    public Items createFoodMenu() {
+        Items i = new Items();
         this.foodInventoryList.add(i);
         return i;
     }
-    
+
     public void deleteFoodItem(Items item) {
         foodInventoryList.remove(item);
     }
-    
+
     public void deleteStationeryItem(Items item) {
         stationeryInventoryList.remove(item);
     }
-    
-    public Items createStationeryMenu(){
-        Items i= new Items();
+
+    public Items createStationeryMenu() {
+        Items i = new Items();
         this.stationeryInventoryList.add(i);
         return i;
     }

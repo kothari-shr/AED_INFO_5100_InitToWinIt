@@ -47,8 +47,6 @@ public class TrainerAppointmentJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         weightBtn = new javax.swing.JButton();
         fitnessBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         rightJPanel = new javax.swing.JPanel();
 
         setLayout(new java.awt.CardLayout());
@@ -56,10 +54,10 @@ public class TrainerAppointmentJPanel extends javax.swing.JPanel {
         jSplitPane1.setDividerLocation(80);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setBackground(new java.awt.Color(102, 255, 255));
         backJButton.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         backJButton.setForeground(new java.awt.Color(51, 51, 51));
         backJButton.setText("<< Back");
@@ -70,7 +68,7 @@ public class TrainerAppointmentJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, 40));
 
-        weightBtn.setBackground(new java.awt.Color(204, 204, 204));
+        weightBtn.setBackground(new java.awt.Color(102, 255, 255));
         weightBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         weightBtn.setForeground(new java.awt.Color(51, 51, 51));
         weightBtn.setText("Weight Trainer");
@@ -81,7 +79,7 @@ public class TrainerAppointmentJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(weightBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 25, 156, 35));
 
-        fitnessBtn.setBackground(new java.awt.Color(204, 204, 204));
+        fitnessBtn.setBackground(new java.awt.Color(102, 255, 255));
         fitnessBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         fitnessBtn.setForeground(new java.awt.Color(51, 51, 51));
         fitnessBtn.setText("Fitness Trainer");
@@ -92,15 +90,9 @@ public class TrainerAppointmentJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(fitnessBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 25, 156, 35));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/fitnessTrainer.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 25, -1, 39));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/weightTrainer.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 25, -1, 39));
-
         jSplitPane1.setTopComponent(jPanel1);
 
-        rightJPanel.setBackground(new java.awt.Color(51, 51, 51));
+        rightJPanel.setBackground(new java.awt.Color(0, 102, 102));
         rightJPanel.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(rightJPanel);
 
@@ -133,8 +125,6 @@ public class TrainerAppointmentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JButton fitnessBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JPanel rightJPanel;

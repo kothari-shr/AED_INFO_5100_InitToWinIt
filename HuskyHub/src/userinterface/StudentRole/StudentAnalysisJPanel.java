@@ -97,8 +97,6 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         dietStatusTbl = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -107,17 +105,17 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Your BMI:");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 149, 30));
 
         txtBMI.setEditable(false);
-        txtBMI.setBackground(new java.awt.Color(204, 204, 204));
+        txtBMI.setBackground(new java.awt.Color(204, 255, 204));
         txtBMI.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         txtBMI.setForeground(new java.awt.Color(51, 51, 51));
         txtBMI.setEnabled(false);
@@ -129,12 +127,12 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         add(txtBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 150, 32));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setForeground(new java.awt.Color(102, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Based on your BMI you are:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, -1, 40));
 
-        btnDocApp.setBackground(new java.awt.Color(204, 204, 204));
+        btnDocApp.setBackground(new java.awt.Color(102, 255, 255));
         btnDocApp.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         btnDocApp.setForeground(new java.awt.Color(51, 51, 51));
         btnDocApp.setText("Get Doctor Appointment");
@@ -146,18 +144,18 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         add(btnDocApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 183, 40));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Your Goal:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 60, 32));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel6.setForeground(new java.awt.Color(102, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Your Analysis");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 692, 36));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 692, 36));
 
-        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setBackground(new java.awt.Color(102, 255, 255));
         backJButton.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         backJButton.setForeground(new java.awt.Color(51, 51, 51));
         backJButton.setText("<< Back");
@@ -169,7 +167,7 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, 30));
 
         txtWtDec.setEditable(false);
-        txtWtDec.setBackground(new java.awt.Color(204, 204, 204));
+        txtWtDec.setBackground(new java.awt.Color(204, 255, 204));
         txtWtDec.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         txtWtDec.setForeground(new java.awt.Color(51, 51, 51));
         txtWtDec.setEnabled(false);
@@ -180,13 +178,13 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         });
         add(txtWtDec, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 150, 32));
 
-        goalComboBox.setBackground(new java.awt.Color(204, 204, 204));
+        goalComboBox.setBackground(new java.awt.Color(204, 255, 204));
         goalComboBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         goalComboBox.setForeground(new java.awt.Color(51, 51, 51));
         goalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gain Weight", "Loose Weight" }));
         add(goalComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 138, 32));
 
-        trainerAptBtn.setBackground(new java.awt.Color(204, 204, 204));
+        trainerAptBtn.setBackground(new java.awt.Color(102, 255, 255));
         trainerAptBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         trainerAptBtn.setForeground(new java.awt.Color(51, 51, 51));
         trainerAptBtn.setText("Get Training Workouts");
@@ -197,7 +195,7 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         });
         add(trainerAptBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 183, 40));
 
-        submitRequest.setBackground(new java.awt.Color(204, 204, 204));
+        submitRequest.setBackground(new java.awt.Color(102, 255, 255));
         submitRequest.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         submitRequest.setForeground(new java.awt.Color(51, 51, 51));
         submitRequest.setText("Submit Request to Nutrition");
@@ -208,7 +206,7 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         });
         add(submitRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 190, 45));
 
-        dietStatusTbl.setBackground(new java.awt.Color(204, 204, 204));
+        dietStatusTbl.setBackground(new java.awt.Color(204, 255, 204));
         dietStatusTbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         dietStatusTbl.setForeground(new java.awt.Color(51, 51, 51));
         dietStatusTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -242,16 +240,10 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 720, 130));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Training");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 180, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundLogo.png"))); // NOI18N
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 100));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundFoot.png"))); // NOI18N
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 264, 52));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 760, 10));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -262,19 +254,19 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 760, 10));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Diet Status");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 378, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setForeground(new java.awt.Color(102, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Nutrition");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 180, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setForeground(new java.awt.Color(102, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Doctor");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 180, -1));
@@ -385,7 +377,6 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
     private javax.swing.JTable dietStatusTbl;
     private javax.swing.JComboBox<String> goalComboBox;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -393,7 +384,6 @@ public class StudentAnalysisJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

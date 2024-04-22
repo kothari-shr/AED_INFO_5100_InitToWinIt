@@ -139,16 +139,16 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1000, 807));
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Maintenance Request Details");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 0, 1127, 37));
 
-        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setBackground(new java.awt.Color(102, 255, 255));
         backBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         backBtn.setForeground(new java.awt.Color(51, 51, 51));
         backBtn.setText("<< Back");
@@ -159,7 +159,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 30));
 
-        dormServiceTbl.setBackground(new java.awt.Color(204, 204, 204));
+        dormServiceTbl.setBackground(new java.awt.Color(204, 255, 204));
         dormServiceTbl.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         dormServiceTbl.setForeground(new java.awt.Color(51, 51, 51));
         dormServiceTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -187,18 +187,19 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 149, -1, 93));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel7.setForeground(new java.awt.Color(102, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Services Available");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 452, -1));
 
+        jLabel3.setBackground(new java.awt.Color(102, 255, 255));
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Message:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 99, 40));
 
-        studentNotes.setBackground(new java.awt.Color(204, 204, 204));
+        studentNotes.setBackground(new java.awt.Color(204, 255, 204));
         studentNotes.setColumns(20);
         studentNotes.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         studentNotes.setForeground(new java.awt.Color(51, 51, 51));
@@ -207,7 +208,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 260, 58));
 
-        addToCartBtn.setBackground(new java.awt.Color(204, 204, 204));
+        addToCartBtn.setBackground(new java.awt.Color(102, 255, 255));
         addToCartBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         addToCartBtn.setForeground(new java.awt.Color(51, 51, 51));
         addToCartBtn.setText("Add To Cart");
@@ -240,7 +241,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(placeOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 620, 125, 49));
 
-        invoiceTbl.setBackground(new java.awt.Color(204, 204, 204));
+        invoiceTbl.setBackground(new java.awt.Color(204, 255, 204));
         invoiceTbl.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         invoiceTbl.setForeground(new java.awt.Color(51, 51, 51));
         invoiceTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -263,14 +264,15 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, 114));
 
+        jLabel4.setBackground(new java.awt.Color(102, 255, 255));
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Total Price:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 125, -1));
 
         totBillTxt.setEditable(false);
-        totBillTxt.setBackground(new java.awt.Color(204, 204, 204));
+        totBillTxt.setBackground(new java.awt.Color(204, 255, 204));
         totBillTxt.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         totBillTxt.setForeground(new java.awt.Color(51, 51, 51));
         jPanel1.add(totBillTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 193, -1));
@@ -280,7 +282,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 452, -1));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Order History Details");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 440, -1));
@@ -294,12 +296,12 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 1010, -1));
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel6.setForeground(new java.awt.Color(102, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Cart Items");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 450, -1));
 
-        histTbl.setBackground(new java.awt.Color(204, 204, 204));
+        histTbl.setBackground(new java.awt.Color(204, 255, 204));
         histTbl.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         histTbl.setForeground(new java.awt.Color(51, 51, 51));
         histTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -322,7 +324,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 440, 93));
 
-        histItemTbl.setBackground(new java.awt.Color(204, 204, 204));
+        histItemTbl.setBackground(new java.awt.Color(204, 255, 204));
         histItemTbl.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         histItemTbl.setForeground(new java.awt.Color(51, 51, 51));
         histItemTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -345,7 +347,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, 114));
 
-        addToCartHistBtn.setBackground(new java.awt.Color(204, 204, 204));
+        addToCartHistBtn.setBackground(new java.awt.Color(102, 255, 255));
         addToCartHistBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         addToCartHistBtn.setForeground(new java.awt.Color(51, 51, 51));
         addToCartHistBtn.setText("Show Items");
@@ -357,7 +359,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
         jPanel1.add(addToCartHistBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel9.setForeground(new java.awt.Color(102, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Service Request History");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 452, -1));
@@ -371,7 +373,7 @@ public class RaiseRequestJPanel extends javax.swing.JPanel {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1074, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(120, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

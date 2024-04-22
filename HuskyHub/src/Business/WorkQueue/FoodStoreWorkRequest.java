@@ -16,7 +16,8 @@ import Business.Store.Items;
 public class FoodStoreWorkRequest extends WorkRequest{
 
     ArrayList<Items> foodRequestList;
-
+    int totalBill=0;
+    
     public FoodStoreWorkRequest() {
         foodRequestList = new ArrayList<>();
     }
@@ -30,10 +31,12 @@ public class FoodStoreWorkRequest extends WorkRequest{
     }
 
     public int getTotalBill() {
-        int sum = 0;
-        for (Items i : foodRequestList) {
-            sum += i.getPrice() * i.getQuantity();
-        }
-        return sum;
+        return totalBill;
     }
+
+    public void setTotalBill(int totalBill) {
+        this.totalBill = totalBill;
+    }
+    
+    
 }

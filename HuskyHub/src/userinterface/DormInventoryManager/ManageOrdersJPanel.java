@@ -72,7 +72,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        orderMgtTbl.setBackground(new java.awt.Color(204, 204, 204));
+        orderMgtTbl.setBackground(new java.awt.Color(204, 255, 204));
         orderMgtTbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         orderMgtTbl.setForeground(new java.awt.Color(51, 51, 51));
         orderMgtTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -99,14 +99,14 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
             orderMgtTbl.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 700, 91));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 700, 91));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Dorm Inventory Order Management");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 440, 37));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 440, 37));
 
         backBtn.setBackground(new java.awt.Color(102, 255, 255));
         backBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -128,7 +128,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 viewOrderBtnActionPerformed(evt);
             }
         });
-        add(viewOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+        add(viewOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
         refreshBtn.setBackground(new java.awt.Color(102, 255, 255));
         refreshBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -139,7 +139,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 170, -1, -1));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, -1, 40));
 
         placeOrderBtn.setBackground(new java.awt.Color(102, 255, 255));
         placeOrderBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -150,7 +150,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 placeOrderBtnActionPerformed(evt);
             }
         });
-        add(placeOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, -1, -1));
+        add(placeOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, -1, -1));
 
         assignDelManBtn.setBackground(new java.awt.Color(102, 255, 255));
         assignDelManBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -161,9 +161,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
                 assignDelManBtnActionPerformed(evt);
             }
         });
-        add(assignDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, -1, -1));
+        add(assignDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
 
-        itemListTbl.setBackground(new java.awt.Color(204, 204, 204));
+        itemListTbl.setBackground(new java.awt.Color(204, 255, 204));
         itemListTbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         itemListTbl.setForeground(new java.awt.Color(51, 51, 51));
         itemListTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -188,26 +188,26 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
             itemListTbl.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 478, 93));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 478, 93));
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Order Details");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 452, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 380, 290, -1));
 
         jLabel6.setBackground(new java.awt.Color(51, 51, 51));
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Total Price:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 550, 108, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 108, -1));
 
         totBillTxt.setEditable(false);
-        totBillTxt.setBackground(new java.awt.Color(204, 204, 204));
+        totBillTxt.setBackground(new java.awt.Color(204, 255, 204));
         totBillTxt.setForeground(new java.awt.Color(51, 51, 51));
-        add(totBillTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 540, 193, -1));
+        add(totBillTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 540, 193, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

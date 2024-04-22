@@ -111,14 +111,12 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         greetLbl = new javax.swing.JLabel();
         viewDetailsBtn = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         enterpriseLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 51, 51));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblStudentList.setBackground(new java.awt.Color(204, 204, 204));
+        tblStudentList.setBackground(new java.awt.Color(204, 255, 204));
         tblStudentList.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         tblStudentList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,7 +139,7 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblStudentList);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 675, 91));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 675, 91));
 
         jButton1.setBackground(new java.awt.Color(102, 255, 255));
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
@@ -152,36 +150,36 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 580, -1, 40));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, -1, 40));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 107, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 107, 30));
 
         nameTxt.setEditable(false);
-        nameTxt.setBackground(new java.awt.Color(204, 204, 204));
+        nameTxt.setBackground(new java.awt.Color(204, 255, 204));
         nameTxt.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         nameTxt.setForeground(new java.awt.Color(51, 51, 51));
-        add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 150, 30));
+        add(nameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 150, 30));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Age:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 90, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 90, 30));
 
         txtAge.setEditable(false);
-        txtAge.setBackground(new java.awt.Color(204, 204, 204));
+        txtAge.setBackground(new java.awt.Color(204, 255, 204));
         txtAge.setForeground(new java.awt.Color(51, 51, 51));
-        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 150, 30));
+        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 150, 30));
 
         jLabel9.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(102, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Gender:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 107, 20));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 107, 20));
 
         radioMale.setBackground(new java.awt.Color(0, 51, 51));
         radioMale.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
@@ -193,7 +191,7 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
                 radioMaleActionPerformed(evt);
             }
         });
-        add(radioMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 68, -1));
+        add(radioMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 68, -1));
 
         radioFemale.setBackground(new java.awt.Color(0, 51, 51));
         radioFemale.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
@@ -205,46 +203,46 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
                 radioFemaleActionPerformed(evt);
             }
         });
-        add(radioFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 72, -1));
+        add(radioFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 72, -1));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Height(in cms):");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 440, 86, 30));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 86, 30));
 
         txtHeight.setEditable(false);
-        txtHeight.setBackground(new java.awt.Color(204, 204, 204));
+        txtHeight.setBackground(new java.awt.Color(204, 255, 204));
         txtHeight.setForeground(new java.awt.Color(51, 51, 51));
-        add(txtHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 150, 30));
+        add(txtHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 150, 30));
 
         jLabel8.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Weight (in Kgs):");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, -1, 30));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, 30));
 
         txtWeight.setEditable(false);
-        txtWeight.setBackground(new java.awt.Color(204, 204, 204));
+        txtWeight.setBackground(new java.awt.Color(204, 255, 204));
         txtWeight.setForeground(new java.awt.Color(51, 51, 51));
-        add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 150, 30));
+        add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 150, 30));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Message:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 520, 110, 50));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 110, 50));
 
-        doctorMsgTxt.setBackground(new java.awt.Color(204, 204, 204));
+        doctorMsgTxt.setBackground(new java.awt.Color(204, 255, 204));
         doctorMsgTxt.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         doctorMsgTxt.setForeground(new java.awt.Color(51, 51, 51));
-        add(doctorMsgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 296, 80));
+        add(doctorMsgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 296, 80));
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel10.setForeground(new java.awt.Color(102, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Welcome,");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 120, 40));
@@ -264,18 +262,12 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
                 viewDetailsBtnActionPerformed(evt);
             }
         });
-        add(viewDetailsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 138, 45));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundLogo.png"))); // NOI18N
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 100));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundFoot.png"))); // NOI18N
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 264, 52));
+        add(viewDetailsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, 138, 45));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         enterpriseLabel.setForeground(new java.awt.Color(102, 255, 255));
         enterpriseLabel.setText("STUDENT DETAILS");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 410, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 410, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void radioMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioMaleActionPerformed
@@ -396,8 +388,6 @@ public class GenPractitionerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel greetLbl;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;

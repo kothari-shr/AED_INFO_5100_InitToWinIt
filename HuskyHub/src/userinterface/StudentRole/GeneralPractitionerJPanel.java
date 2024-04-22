@@ -90,28 +90,26 @@ public class GeneralPractitionerJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         genPracTbl = new javax.swing.JTable();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         enterpriseLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        msgTxt.setBackground(new java.awt.Color(204, 204, 204));
+        msgTxt.setBackground(new java.awt.Color(204, 255, 204));
         msgTxt.setColumns(20);
         msgTxt.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         msgTxt.setForeground(new java.awt.Color(51, 51, 51));
         msgTxt.setRows(5);
         jScrollPane1.setViewportView(msgTxt);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 320, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 320, -1));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setText("Enter Your Message:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 170, 80));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 170, 80));
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setBackground(new java.awt.Color(102, 255, 255));
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("Book Appointment");
@@ -120,9 +118,9 @@ public class GeneralPractitionerJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 155, 48));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 155, 48));
 
-        genPracTbl.setBackground(new java.awt.Color(204, 204, 204));
+        genPracTbl.setBackground(new java.awt.Color(204, 255, 204));
         genPracTbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         genPracTbl.setForeground(new java.awt.Color(51, 51, 51));
         genPracTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -146,20 +144,12 @@ public class GeneralPractitionerJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(genPracTbl);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 820, 130));
-
-        jLabel9.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundLogo.png"))); // NOI18N
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 100));
-
-        jLabel10.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundFoot.png"))); // NOI18N
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 264, 52));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 820, 130));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        enterpriseLabel.setForeground(new java.awt.Color(255, 51, 51));
+        enterpriseLabel.setForeground(new java.awt.Color(102, 255, 255));
         enterpriseLabel.setText("GENERAL PRACTITIONER");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 410, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 410, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -226,9 +216,7 @@ public class GeneralPractitionerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JTable genPracTbl;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea msgTxt;

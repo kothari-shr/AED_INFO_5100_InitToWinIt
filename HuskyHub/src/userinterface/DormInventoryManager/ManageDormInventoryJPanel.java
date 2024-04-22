@@ -57,7 +57,7 @@ public class ManageDormInventoryJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Dorm Inventory");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 320, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 320, 40));
 
         manageInventoryBtn.setBackground(new java.awt.Color(102, 255, 255));
         manageInventoryBtn.setForeground(new java.awt.Color(51, 51, 51));
@@ -67,7 +67,7 @@ public class ManageDormInventoryJPanel extends javax.swing.JPanel {
                 manageInventoryBtnActionPerformed(evt);
             }
         });
-        add(manageInventoryBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 170, 50));
+        add(manageInventoryBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 170, 50));
 
         manageOrdersBtn.setBackground(new java.awt.Color(102, 255, 255));
         manageOrdersBtn.setForeground(new java.awt.Color(51, 51, 51));
@@ -77,15 +77,16 @@ public class ManageDormInventoryJPanel extends javax.swing.JPanel {
                 manageOrdersBtnActionPerformed(evt);
             }
         });
-        add(manageOrdersBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 170, 50));
+        add(manageOrdersBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 170, 50));
 
         jPanel3.setBackground(new java.awt.Color(0, 204, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Welcome,");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 90, 30));
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 90, 30));
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 40));
 

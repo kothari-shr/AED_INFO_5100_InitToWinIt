@@ -17,6 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -47,10 +48,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
     private void clearLabels() {
         emailLbl.setVisible(false);
-        emailSuccessLbl.setVisible(false);
-        passwordSuccessLbl.setVisible(false);
         passwordLbl.setVisible(false);
-        citySuccessLbl.setVisible(false);
         cityLbl.setVisible(false);
     }
 
@@ -138,11 +136,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         backJButton1 = new javax.swing.JButton();
         submitJButton1 = new javax.swing.JButton();
         emailLbl = new javax.swing.JLabel();
-        emailSuccessLbl = new javax.swing.JLabel();
         passwordLbl = new javax.swing.JLabel();
-        passwordSuccessLbl = new javax.swing.JLabel();
         cityLbl = new javax.swing.JLabel();
-        citySuccessLbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -273,7 +268,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 backJButton1ActionPerformed(evt);
             }
         });
-        add(backJButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+        add(backJButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, 30));
 
         submitJButton1.setBackground(new java.awt.Color(102, 255, 255));
         submitJButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -292,26 +287,17 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         emailLbl.setText("Valid Format - 'xx@xx.xx'");
         add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 190, 20));
 
-        emailSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(emailSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 30, 30));
-
         passwordLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         passwordLbl.setForeground(new java.awt.Color(255, 51, 51));
         passwordLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         passwordLbl.setText("Sample format: Asdf@1");
         add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 190, 50));
 
-        passwordSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(passwordSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 30, -1));
-
         cityLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         cityLbl.setForeground(new java.awt.Color(255, 51, 51));
         cityLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cityLbl.setText("Only Alphabets are allowed");
         add(cityLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 190, 40));
-
-        citySuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(citySuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, 30, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
@@ -379,56 +365,67 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if (!usernamePatternCorrect(usernameJTextField.getText()) && !(usernameJTextField.getText().isEmpty())) {
             emailLbl.setVisible(true);
-            emailSuccessLbl.setVisible(false);
             emailValid = false;
+            nonAcceptableInput(usernameJTextField);
+
         } else if (usernameJTextField.getText().isEmpty()) {
             emailLbl.setVisible(false);
             emailValid = false;
-            emailSuccessLbl.setVisible(false);
+            nonAcceptableInput(usernameJTextField);
+
         } else {
             emailLbl.setVisible(false);
-            emailSuccessLbl.setVisible(true);
             emailValid = true;
+            acceptableInput(usernameJTextField);
+            
         }
     }//GEN-LAST:event_usernameJTextFieldKeyReleased
 
     private void passwordJPasswordFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordJPasswordFieldKeyReleased
         // TODO add your handling code here:
         if (!passwordPatternCorrect(passwordJPasswordField.getText()) && !(passwordJPasswordField.getText().isEmpty())) {
-            passwordSuccessLbl.setVisible(false);
             passwordLbl.setVisible(true);
+            nonAcceptableInput(passwordJPasswordField);
+
         } else if (passwordJPasswordField.getText().isEmpty()) {
             passwordLbl.setVisible(false);
-            passwordSuccessLbl.setVisible(false);
+            nonAcceptableInput(passwordJPasswordField);
         } else {
             passwordLbl.setVisible(false);
-            passwordSuccessLbl.setVisible(true);
+            acceptableInput(passwordJPasswordField);
         }
     }//GEN-LAST:event_passwordJPasswordFieldKeyReleased
 
     private void nameJTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameJTextFieldKeyReleased
         // TODO add your handling code here:
         if (!cityPatternCorrect(nameJTextField.getText()) && !(nameJTextField.getText().isEmpty())) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(true);
             nameValid = false;
+            nonAcceptableInput(nameJTextField);
         } else if (nameJTextField.getText().isEmpty()) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(false);
             nameValid = false;
+            nonAcceptableInput(nameJTextField);
+
         } else {
             nameValid = true;
             cityLbl.setVisible(false);
-            citySuccessLbl.setVisible(true);
+            acceptableInput(nameJTextField);
         }
     }//GEN-LAST:event_nameJTextFieldKeyReleased
 
+    private void acceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(204,255,204));
+    }
+    
+    private void nonAcceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(255,153,153));
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton1;
     private javax.swing.JLabel cityLbl;
-    private javax.swing.JLabel citySuccessLbl;
     private javax.swing.JLabel emailLbl;
-    private javax.swing.JLabel emailSuccessLbl;
     private javax.swing.JComboBox enterpriseJComboBox;
     private javax.swing.JTable enterpriseJTable;
     private javax.swing.JLabel jLabel1;
@@ -442,7 +439,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox networkJComboBox;
     private javax.swing.JPasswordField passwordJPasswordField;
     private javax.swing.JLabel passwordLbl;
-    private javax.swing.JLabel passwordSuccessLbl;
     private javax.swing.JButton submitJButton1;
     private javax.swing.JTextField usernameJTextField;
     // End of variables declaration//GEN-END:variables

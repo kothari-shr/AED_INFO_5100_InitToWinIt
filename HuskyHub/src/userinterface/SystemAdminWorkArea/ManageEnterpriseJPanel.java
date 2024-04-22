@@ -14,6 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -35,7 +36,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        citySuccessLbl.setVisible(false);
         enterpriseJTable.getTableHeader().setDefaultRenderer(new tableHeaderColors());
         cityLbl.setVisible(false);
         populateTable();
@@ -98,7 +98,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         submitJButton = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        citySuccessLbl = new javax.swing.JLabel();
         cityLbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 102));
@@ -211,9 +210,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel4.setText("Add ENTERPRISE");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 723, 30));
 
-        citySuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(citySuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 310, 30, 60));
-
         cityLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         cityLbl.setForeground(new java.awt.Color(255, 51, 51));
         cityLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -241,13 +237,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
 
             n = network;
-            citySuccessLbl.setVisible(false);
             populateTable();
             nameJTextField.setText("");
         } else {
             if (entAvail == 1) {
                 JOptionPane.showMessageDialog(null, "Enterprise is already added !", "Alert", JOptionPane.INFORMATION_MESSAGE);
-                citySuccessLbl.setVisible(false);
                 nameJTextField.setText("");
             } else {
                 JOptionPane.showMessageDialog(null, "Please enter all the required fields correctly!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -280,20 +274,28 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private void nameJTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameJTextFieldKeyReleased
         // TODO add your handling code here:
         if (!cityPatternCorrect(nameJTextField.getText()) && !(nameJTextField.getText().isEmpty())) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(true);
             nameValid = false;
+            nonAcceptableInput(nameJTextField);
         } else if (nameJTextField.getText().isEmpty()) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(false);
             nameValid = false;
+            nonAcceptableInput(nameJTextField);
         } else {
             cityLbl.setVisible(false);
             nameValid = true;
-            citySuccessLbl.setVisible(true);
+            acceptableInput(nameJTextField);
         }
     }//GEN-LAST:event_nameJTextFieldKeyReleased
 
+    private void acceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(204,255,204));
+    }
+    
+    private void nonAcceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(255,153,153));
+    }
+    
     private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameJTextFieldActionPerformed
@@ -301,7 +303,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel cityLbl;
-    private javax.swing.JLabel citySuccessLbl;
     private javax.swing.JTable enterpriseJTable;
     private javax.swing.JComboBox enterpriseTypeJComboBox;
     private javax.swing.JLabel jLabel1;

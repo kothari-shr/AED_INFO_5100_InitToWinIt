@@ -67,14 +67,12 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         totBillTxt = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         enterpriseLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        orderMgtTbl.setBackground(new java.awt.Color(204, 204, 204));
+        orderMgtTbl.setBackground(new java.awt.Color(204, 255, 204));
         orderMgtTbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         orderMgtTbl.setForeground(new java.awt.Color(51, 51, 51));
         orderMgtTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -101,9 +99,9 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
             orderMgtTbl.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 700, 91));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 700, 91));
 
-        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setBackground(new java.awt.Color(102, 255, 255));
         backBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         backBtn.setForeground(new java.awt.Color(51, 51, 51));
         backBtn.setText("< Back");
@@ -114,7 +112,7 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
         });
         add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
-        viewOrderBtn.setBackground(new java.awt.Color(204, 204, 204));
+        viewOrderBtn.setBackground(new java.awt.Color(102, 255, 255));
         viewOrderBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         viewOrderBtn.setForeground(new java.awt.Color(51, 51, 51));
         viewOrderBtn.setText("View Request");
@@ -123,9 +121,9 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 viewOrderBtnActionPerformed(evt);
             }
         });
-        add(viewOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, -1, -1));
+        add(viewOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
-        refreshBtn.setBackground(new java.awt.Color(204, 204, 204));
+        refreshBtn.setBackground(new java.awt.Color(102, 255, 255));
         refreshBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         refreshBtn.setForeground(new java.awt.Color(51, 51, 51));
         refreshBtn.setText("Refresh");
@@ -134,9 +132,9 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 refreshBtnActionPerformed(evt);
             }
         });
-        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, -1, -1));
+        add(refreshBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 160, -1, -1));
 
-        placeOrderBtn.setBackground(new java.awt.Color(204, 204, 204));
+        placeOrderBtn.setBackground(new java.awt.Color(102, 255, 255));
         placeOrderBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         placeOrderBtn.setForeground(new java.awt.Color(51, 51, 51));
         placeOrderBtn.setText("Accept Request");
@@ -145,9 +143,9 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 placeOrderBtnActionPerformed(evt);
             }
         });
-        add(placeOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
+        add(placeOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
 
-        assignDelManBtn.setBackground(new java.awt.Color(204, 204, 204));
+        assignDelManBtn.setBackground(new java.awt.Color(102, 255, 255));
         assignDelManBtn.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         assignDelManBtn.setForeground(new java.awt.Color(51, 51, 51));
         assignDelManBtn.setText("Assign Service Man");
@@ -156,9 +154,9 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
                 assignDelManBtnActionPerformed(evt);
             }
         });
-        add(assignDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, -1, -1));
+        add(assignDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
 
-        itemListTbl.setBackground(new java.awt.Color(204, 204, 204));
+        itemListTbl.setBackground(new java.awt.Color(204, 255, 204));
         itemListTbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         itemListTbl.setForeground(new java.awt.Color(51, 51, 51));
         itemListTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -183,34 +181,29 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
             itemListTbl.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 423, 478, 120));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 478, 120));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel2.setForeground(new java.awt.Color(102, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Order Details");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 452, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 452, -1));
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Total Price:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 108, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, 108, -1));
 
         totBillTxt.setEditable(false);
-        totBillTxt.setBackground(new java.awt.Color(204, 204, 204));
+        totBillTxt.setBackground(new java.awt.Color(204, 255, 204));
         totBillTxt.setForeground(new java.awt.Color(51, 51, 51));
-        add(totBillTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 560, 193, -1));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundLogo.png"))); // NOI18N
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 100));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundFoot.png"))); // NOI18N
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 264, 52));
+        add(totBillTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, 193, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        enterpriseLabel.setForeground(new java.awt.Color(255, 51, 51));
+        enterpriseLabel.setForeground(new java.awt.Color(102, 255, 255));
         enterpriseLabel.setText("Maintenance Request Management");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 440, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 440, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -305,8 +298,6 @@ public class ManageServiceJPanel extends javax.swing.JPanel {
     private javax.swing.JButton backBtn;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JTable itemListTbl;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;

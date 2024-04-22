@@ -18,6 +18,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import userinterface.StudentRole.UpdateStudentJPanel;
 
 /**
  *
@@ -36,6 +37,8 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
     private Student student;
     ImageIcon productImage;
     Network network;
+    
+    
     private boolean ageValid = true;
     private boolean zipValid = true;
     private boolean heightValid = true;
@@ -117,7 +120,9 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         placeOrderBtn1 = new javax.swing.JButton();
         imgLabel = new javax.swing.JLabel();
         btnUpdateProfile = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnUniversityStore = new javax.swing.JButton();
+        btnStationeryStore = new javax.swing.JButton();
+        btnFoodStore = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 51, 51));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -159,7 +164,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
                 btnMaintainReqActionPerformed(evt);
             }
         });
-        add(btnMaintainReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 340, 70));
+        add(btnMaintainReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 340, 70));
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -193,6 +198,8 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(placeOrderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 340, 80));
+
+        imgLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/StudentWorkArea.jpg"))); // NOI18N
         add(imgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 186, 490, 270));
 
         btnUpdateProfile.setBackground(new java.awt.Color(102, 255, 255));
@@ -206,12 +213,71 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnUpdateProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 60, 150, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/manageAdminImg.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 40, 40));
+        btnUniversityStore.setBackground(new java.awt.Color(102, 255, 255));
+        btnUniversityStore.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        btnUniversityStore.setForeground(new java.awt.Color(51, 51, 51));
+        btnUniversityStore.setText("University Store");
+        btnUniversityStore.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUniversityStoreMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnUniversityStoreMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnUniversityStoreMouseExited(evt);
+            }
+        });
+        btnUniversityStore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUniversityStoreActionPerformed(evt);
+            }
+        });
+        add(btnUniversityStore, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 340, 70));
+
+        btnStationeryStore.setBackground(new java.awt.Color(102, 255, 255));
+        btnStationeryStore.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        btnStationeryStore.setForeground(new java.awt.Color(51, 51, 51));
+        btnStationeryStore.setText("Stationery Store");
+        btnStationeryStore.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnStationeryStoreMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnStationeryStoreMouseExited(evt);
+            }
+        });
+        btnStationeryStore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStationeryStoreActionPerformed(evt);
+            }
+        });
+        add(btnStationeryStore, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 540, 200, 50));
+        btnStationeryStore.setVisible(false);
+
+        btnFoodStore.setBackground(new java.awt.Color(102, 255, 255));
+        btnFoodStore.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        btnFoodStore.setForeground(new java.awt.Color(51, 51, 51));
+        btnFoodStore.setText("Food Store");
+        btnFoodStore.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnFoodStoreMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFoodStoreMouseExited(evt);
+            }
+        });
+        btnFoodStore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFoodStoreActionPerformed(evt);
+            }
+        });
+        add(btnFoodStore, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 540, 200, 50));
+        btnFoodStore.setVisible(false);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAnalysisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalysisActionPerformed
-
+            //                                                                  JPanel userProcessContainer, Student student, EcoSystem system, UserAccount userAccount, Enterprise enterprise, Network network
         StudentAnalysisJPanel studentAnalysisJPanel = new StudentAnalysisJPanel(userProcessContainer, student, system, userAccount, enterprise, network);
         userProcessContainer.add("StudentAnalysisJPanel", studentAnalysisJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -236,6 +302,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnAnalysisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnalysisMouseEntered
         // TODO add your handling code here:
+        hideStoreButtons();
         imgLabel.setIcon(new ImageIcon(getClass().getResource("/userinterface/images/fitness.jpg")));
     }//GEN-LAST:event_btnAnalysisMouseEntered
 
@@ -247,19 +314,25 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAnalysisMouseExited
 
     private void btnUpdateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateProfileActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: JPanel userProcessContainer, Enterprise enterprise, Organization organization, UserAccount account, EcoSystem business, Network network
+        UpdateStudentJPanel updateStudentJPanel = new UpdateStudentJPanel(userProcessContainer, enterprise, organization, userAccount, system, network);
+        userProcessContainer.add("UpdateStudentJPanel", updateStudentJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+        
       
     }//GEN-LAST:event_btnUpdateProfileActionPerformed
 
     private void placeOrderBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_placeOrderBtn1MouseEntered
         // TODO add your handling code here:
         imgLabel.setIcon(new ImageIcon(getClass().getResource("/userinterface/images/StudentStore.png")));
-        
+        hideStoreButtons();
     }//GEN-LAST:event_placeOrderBtn1MouseEntered
 
     private void btnMaintainReqMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMaintainReqMouseEntered
         // TODO add your handling code here:
         imgLabel.setIcon(new ImageIcon(getClass().getResource("/userinterface/images/ch.jpeg")));
+        hideStoreButtons();
     }//GEN-LAST:event_btnMaintainReqMouseEntered
 
     private void placeOrderBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_placeOrderBtn1MouseExited
@@ -274,14 +347,76 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         imgLabel.setIcon(productImage);
     }//GEN-LAST:event_btnMaintainReqMouseExited
 
+    private void btnUniversityStoreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUniversityStoreMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUniversityStoreMouseEntered
+
+    private void btnUniversityStoreMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUniversityStoreMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUniversityStoreMouseExited
+
+    private void btnUniversityStoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUniversityStoreActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnUniversityStoreActionPerformed
+
+    private void btnStationeryStoreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStationeryStoreMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnStationeryStoreMouseEntered
+
+    private void btnStationeryStoreMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStationeryStoreMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnStationeryStoreMouseExited
+
+    private void btnStationeryStoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStationeryStoreActionPerformed
+        // TODO add your handling code here:
+        StudentStationeryJPanel requestPanel = new StudentStationeryJPanel(userProcessContainer, student, system, userAccount, enterprise, network);
+        userProcessContainer.add("StudentStationeryJPanel", requestPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnStationeryStoreActionPerformed
+
+    private void btnFoodStoreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFoodStoreMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFoodStoreMouseEntered
+
+    private void btnFoodStoreMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFoodStoreMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFoodStoreMouseExited
+
+    private void btnFoodStoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFoodStoreActionPerformed
+        // TODO add your handling code here:
+        StudentFoodStoreJPanel requestPanel = new StudentFoodStoreJPanel(userProcessContainer, student, system, userAccount, enterprise, network);
+        userProcessContainer.add("StudentFoodStoreJPanel", requestPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnFoodStoreActionPerformed
+
+    private void btnUniversityStoreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUniversityStoreMouseClicked
+        // TODO add your handling code here:
+        showStoreBusston();
+    }//GEN-LAST:event_btnUniversityStoreMouseClicked
+
+    private void hideStoreButtons(){
+        
+        btnStationeryStore.setVisible(false);
+        btnFoodStore.setVisible(false);
+    }
+
+    private void showStoreBusston(){
+        btnStationeryStore.setVisible(true);
+        btnFoodStore.setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAnalysis;
+    private javax.swing.JButton btnFoodStore;
     private javax.swing.JButton btnMaintainReq;
+    private javax.swing.JButton btnStationeryStore;
+    private javax.swing.JButton btnUniversityStore;
     private javax.swing.JButton btnUpdateProfile;
     private javax.swing.JLabel greetLbl;
     private javax.swing.JLabel imgLabel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton placeOrderBtn1;

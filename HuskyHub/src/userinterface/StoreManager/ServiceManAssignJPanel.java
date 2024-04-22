@@ -53,14 +53,12 @@ public class ServiceManAssignJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         deliveryManCmbBox = new javax.swing.JComboBox<>();
         appointDelManBtn = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         enterpriseLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setBackground(new java.awt.Color(102, 255, 255));
         backBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         backBtn.setForeground(new java.awt.Color(51, 51, 51));
         backBtn.setText("< Back");
@@ -71,13 +69,14 @@ public class ServiceManAssignJPanel extends javax.swing.JPanel {
         });
         add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 82, 37));
 
+        jLabel3.setBackground(new java.awt.Color(102, 255, 255));
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Servicemen");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 151, -1));
+        jLabel3.setText("Servicemen:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 160, 151, -1));
 
-        deliveryManCmbBox.setBackground(new java.awt.Color(204, 204, 204));
+        deliveryManCmbBox.setBackground(new java.awt.Color(204, 255, 204));
         deliveryManCmbBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         deliveryManCmbBox.setForeground(new java.awt.Color(51, 51, 51));
         deliveryManCmbBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -86,9 +85,9 @@ public class ServiceManAssignJPanel extends javax.swing.JPanel {
                 deliveryManCmbBoxActionPerformed(evt);
             }
         });
-        add(deliveryManCmbBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 150, 30));
+        add(deliveryManCmbBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 150, 30));
 
-        appointDelManBtn.setBackground(new java.awt.Color(204, 204, 204));
+        appointDelManBtn.setBackground(new java.awt.Color(102, 255, 255));
         appointDelManBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         appointDelManBtn.setForeground(new java.awt.Color(51, 51, 51));
         appointDelManBtn.setText("Assign");
@@ -97,18 +96,13 @@ public class ServiceManAssignJPanel extends javax.swing.JPanel {
                 appointDelManBtnActionPerformed(evt);
             }
         });
-        add(appointDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 95, 36));
+        add(appointDelManBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 95, 36));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundLogo.png"))); // NOI18N
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 100, 100));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundFoot.png"))); // NOI18N
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 264, 52));
-
+        enterpriseLabel.setBackground(new java.awt.Color(102, 255, 255));
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        enterpriseLabel.setForeground(new java.awt.Color(255, 51, 51));
+        enterpriseLabel.setForeground(new java.awt.Color(102, 255, 255));
         enterpriseLabel.setText("Assign Serviceman");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 410, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 410, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -142,8 +136,6 @@ public class ServiceManAssignJPanel extends javax.swing.JPanel {
     private javax.swing.JButton backBtn;
     private javax.swing.JComboBox<String> deliveryManCmbBox;
     private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 

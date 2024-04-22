@@ -13,6 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -35,7 +36,6 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
 
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-        citySuccessLbl.setVisible(false);
         cityLbl.setVisible(false);
         networkJTable.getTableHeader().setDefaultRenderer(new tableHeaderColors());
         populateNetworkTable();
@@ -77,7 +77,6 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         networkJTable = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         cityLbl = new javax.swing.JLabel();
-        citySuccessLbl = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 102, 102));
@@ -165,9 +164,6 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         cityLbl.setText("Only Alphabets are allowed");
         add(cityLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 190, 20));
 
-        citySuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(citySuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 40, 50));
-
         jButton1.setBackground(new java.awt.Color(102, 255, 255));
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
@@ -185,7 +181,6 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
             String name = nameJTextField.getText();
             Network network = system.createAndAddNetwork();
             network.setName(name);
-            citySuccessLbl.setVisible(false);
             populateNetworkTable();
         } else {
             JOptionPane.showMessageDialog(null, "Please enter all the required fields correctly!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -205,20 +200,29 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private void nameJTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameJTextFieldKeyReleased
         // TODO add your handling code here:
         if (!cityPatternCorrect(nameJTextField.getText()) && !(nameJTextField.getText().isEmpty())) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(true);
             cityValid = false;
+            nonAcceptableInput(nameJTextField);
         } else if (nameJTextField.getText().isEmpty()) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(false);
             cityValid = false;
+            nonAcceptableInput(nameJTextField);
         } else {
             cityLbl.setVisible(false);
             cityValid = true;
-            citySuccessLbl.setVisible(true);
+            acceptableInput(nameJTextField);
         }
     }//GEN-LAST:event_nameJTextFieldKeyReleased
 
+     private void acceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(204,255,204));
+    }
+    
+    private void nonAcceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(255,153,153));
+    }
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int row = networkJTable.getSelectedRow();
         if (row < 0) {
@@ -233,7 +237,6 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel cityLbl;
-    private javax.swing.JLabel citySuccessLbl;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

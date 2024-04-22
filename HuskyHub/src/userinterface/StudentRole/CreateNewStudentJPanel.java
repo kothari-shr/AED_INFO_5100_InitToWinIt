@@ -11,10 +11,12 @@ import Business.EcoSystem;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.StudentRole;
+import java.awt.Color;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -48,27 +50,17 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
 
     private void clearLabels() {
         nameLbl.setVisible(false);
-        nameSuccessLbl.setVisible(false);
         emailLbl.setVisible(false);
         emailIDAlreadyLbl.setVisible(false);
-        emailSuccessLbl.setVisible(false);
-        passwordSuccessLbl.setVisible(false);
         passwordLbl.setVisible(false);
-        confirmPasswordSuccessLbl.setVisible(false);
         confirmPasswordLbl.setVisible(false);
-        AgeSuccessLbl.setVisible(false);
         invalidAgeLbl.setVisible(false);
         ageBandLbl.setVisible(false);
-        addressSuccessLbl.setVisible(false);
         addressLbl.setVisible(false);
         cityLbl.setVisible(false);
-        citySuccessLbl.setVisible(false);
         zipLbl.setVisible(false);
-        zipSuccessLbl.setVisible(false);
         heightLbl.setVisible(false);
-        heightSuccessLbl.setVisible(false);
         weightLbl.setVisible(false);
-        weightSuccessLbl.setVisible(false);
 
     }
 
@@ -160,37 +152,24 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         networkJComboBox = new javax.swing.JComboBox();
         jLabel13 = new javax.swing.JLabel();
         txtZipcode = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
-        AgeSuccessLbl = new javax.swing.JLabel();
         nameLbl = new javax.swing.JLabel();
         invalidAgeLbl = new javax.swing.JLabel();
         ageBandLbl = new javax.swing.JLabel();
-        confirmPasswordSuccessLbl = new javax.swing.JLabel();
         confirmPasswordLbl = new javax.swing.JLabel();
-        nameSuccessLbl = new javax.swing.JLabel();
         emailLbl = new javax.swing.JLabel();
-        emailSuccessLbl = new javax.swing.JLabel();
-        passwordSuccessLbl = new javax.swing.JLabel();
         passwordLbl = new javax.swing.JLabel();
         addressLbl = new javax.swing.JLabel();
-        addressSuccessLbl = new javax.swing.JLabel();
-        citySuccessLbl = new javax.swing.JLabel();
         cityLbl = new javax.swing.JLabel();
-        zipSuccessLbl = new javax.swing.JLabel();
         zipLbl = new javax.swing.JLabel();
-        weightSuccessLbl = new javax.swing.JLabel();
-        heightSuccessLbl = new javax.swing.JLabel();
         weightLbl = new javax.swing.JLabel();
         heightLbl = new javax.swing.JLabel();
         emailIDAlreadyLbl = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtName.setBackground(new java.awt.Color(204, 204, 204));
+        txtName.setBackground(new java.awt.Color(204, 255, 204));
         txtName.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         txtName.setForeground(new java.awt.Color(51, 51, 51));
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -200,7 +179,7 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         });
         add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 190, 30));
 
-        confirmPasswordTxt.setBackground(new java.awt.Color(204, 204, 204));
+        confirmPasswordTxt.setBackground(new java.awt.Color(204, 255, 204));
         confirmPasswordTxt.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         confirmPasswordTxt.setForeground(new java.awt.Color(51, 51, 51));
         confirmPasswordTxt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -211,12 +190,12 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(confirmPasswordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 190, 30));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setForeground(new java.awt.Color(102, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Email ID:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 107, 30));
 
-        txtPassword.setBackground(new java.awt.Color(204, 204, 204));
+        txtPassword.setBackground(new java.awt.Color(204, 255, 204));
         txtPassword.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(51, 51, 51));
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -226,7 +205,7 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         });
         add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 190, 30));
 
-        txtEmail.setBackground(new java.awt.Color(204, 204, 204));
+        txtEmail.setBackground(new java.awt.Color(204, 255, 204));
         txtEmail.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         txtEmail.setForeground(new java.awt.Color(51, 51, 51));
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -241,7 +220,7 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         });
         add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 190, 30));
 
-        submitBtn.setBackground(new java.awt.Color(255, 51, 51));
+        submitBtn.setBackground(new java.awt.Color(102, 255, 255));
         submitBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         submitBtn.setForeground(new java.awt.Color(51, 51, 51));
         submitBtn.setText("Submit");
@@ -253,7 +232,7 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(submitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, 100, 50));
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Password:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 107, 30));
@@ -262,9 +241,9 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("STUDENT REGISTRATION");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 60, 1210, 50));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-410, 40, 1210, 50));
 
-        resetBtn.setBackground(new java.awt.Color(204, 204, 204));
+        resetBtn.setBackground(new java.awt.Color(102, 255, 255));
         resetBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         resetBtn.setForeground(new java.awt.Color(51, 51, 51));
         resetBtn.setText("Reset");
@@ -276,24 +255,24 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(resetBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 530, 100, 50));
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setForeground(new java.awt.Color(102, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Name:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 107, 30));
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setForeground(new java.awt.Color(102, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Confirm Password:");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Age:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 90, 30));
 
-        txtAge.setBackground(new java.awt.Color(204, 204, 204));
+        txtAge.setBackground(new java.awt.Color(204, 255, 204));
         txtAge.setForeground(new java.awt.Color(51, 51, 51));
         txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -303,13 +282,13 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 190, 30));
 
         jLabel9.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setForeground(new java.awt.Color(102, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Gender:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 107, 20));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setForeground(new java.awt.Color(102, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Height(in cms):");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 86, 30));
@@ -325,7 +304,7 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         });
         add(radioMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, 68, -1));
 
-        txtHeight.setBackground(new java.awt.Color(204, 204, 204));
+        txtHeight.setBackground(new java.awt.Color(204, 255, 204));
         txtHeight.setForeground(new java.awt.Color(51, 51, 51));
         txtHeight.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -344,7 +323,7 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         });
         add(radioFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 72, -1));
 
-        txtWeight.setBackground(new java.awt.Color(204, 204, 204));
+        txtWeight.setBackground(new java.awt.Color(204, 255, 204));
         txtWeight.setForeground(new java.awt.Color(51, 51, 51));
         txtWeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -359,12 +338,12 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, 190, 30));
 
         jLabel10.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel10.setForeground(new java.awt.Color(102, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Address:");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 110, 30));
 
-        txtAdress.setBackground(new java.awt.Color(204, 204, 204));
+        txtAdress.setBackground(new java.awt.Color(204, 255, 204));
         txtAdress.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         txtAdress.setForeground(new java.awt.Color(51, 51, 51));
         txtAdress.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -375,12 +354,12 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(txtAdress, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 190, 30));
 
         jLabel11.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel11.setForeground(new java.awt.Color(102, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel11.setText("City:");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 90, 30));
 
-        txtCity.setBackground(new java.awt.Color(204, 204, 204));
+        txtCity.setBackground(new java.awt.Color(204, 255, 204));
         txtCity.setFont(new java.awt.Font("SansSerif", 0, 11)); // NOI18N
         txtCity.setForeground(new java.awt.Color(51, 51, 51));
         txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -394,22 +373,23 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 190, 30));
 
         jLabel12.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel12.setForeground(new java.awt.Color(102, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel12.setText("Campus");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 80, 30));
 
+        networkJComboBox.setBackground(new java.awt.Color(204, 255, 204));
         networkJComboBox.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(networkJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, 190, 30));
 
         jLabel13.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel13.setForeground(new java.awt.Color(102, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel13.setText("Zip Code:");
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 110, 30));
 
-        txtZipcode.setBackground(new java.awt.Color(204, 204, 204));
+        txtZipcode.setBackground(new java.awt.Color(204, 255, 204));
         txtZipcode.setForeground(new java.awt.Color(51, 51, 51));
         txtZipcode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -417,16 +397,12 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
             }
         });
         add(txtZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 380, 190, 30));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 1190, 10));
 
         jLabel17.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel17.setForeground(new java.awt.Color(102, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel17.setText("Weight (in Kgs):");
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, -1, 20));
-
-        AgeSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(AgeSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 170, 50, 40));
 
         nameLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         nameLbl.setForeground(new java.awt.Color(255, 51, 51));
@@ -444,28 +420,16 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         ageBandLbl.setText("Age Should be between 15-85");
         add(ageBandLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, -1, 20));
 
-        confirmPasswordSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(confirmPasswordSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 40, -1));
-
         confirmPasswordLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         confirmPasswordLbl.setForeground(new java.awt.Color(255, 51, 51));
         confirmPasswordLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         confirmPasswordLbl.setText("Password Not Matching");
         add(confirmPasswordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 160, 20));
 
-        nameSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(nameSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 30, 40));
-
         emailLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         emailLbl.setForeground(new java.awt.Color(255, 51, 51));
         emailLbl.setText("Valid Format - 'xx@xx.xx'");
         add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 150, 20));
-
-        emailSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(emailSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 40, 30));
-
-        passwordSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(passwordSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 30, -1));
 
         passwordLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         passwordLbl.setForeground(new java.awt.Color(255, 51, 51));
@@ -477,33 +441,17 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         addressLbl.setText("Only Alphabets, Numbers, '#/-' are allowed");
         add(addressLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 250, 20));
 
-        addressSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(addressSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 230, 50, -1));
-
-        citySuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(citySuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 280, 30, -1));
-
         cityLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         cityLbl.setForeground(new java.awt.Color(255, 51, 51));
         cityLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cityLbl.setText("Only Alphabets are allowed");
         add(cityLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 310, 160, 20));
 
-        zipSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(zipSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 380, 30, -1));
-
         zipLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         zipLbl.setForeground(new java.awt.Color(255, 51, 51));
         zipLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         zipLbl.setText("Only Numbers Allowed");
         add(zipLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 160, 20));
-
-        weightSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(weightSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 470, 40, 30));
-
-        heightSuccessLbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        heightSuccessLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/tick.png"))); // NOI18N
-        add(heightSuccessLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, 60, 30));
 
         weightLbl.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         weightLbl.setForeground(new java.awt.Color(255, 51, 51));
@@ -522,12 +470,6 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         emailIDAlreadyLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         emailIDAlreadyLbl.setText("EmailID already Exists");
         add(emailIDAlreadyLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 160, 20));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundLogo.png"))); // NOI18N
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 100, 100));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/backgroundFoot.png"))); // NOI18N
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 264, 52));
     }// </editor-fold>//GEN-END:initComponents
 
     private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
@@ -550,16 +492,6 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         txtZipcode.setText("");
         txtHeight.setText("");
         txtWeight.setText("");
-        nameSuccessLbl.setVisible(false);
-        emailSuccessLbl.setVisible(false);
-        passwordSuccessLbl.setVisible(false);
-        confirmPasswordSuccessLbl.setVisible(false);
-        AgeSuccessLbl.setVisible(false);
-        addressSuccessLbl.setVisible(false);
-        citySuccessLbl.setVisible(false);
-        zipSuccessLbl.setVisible(false);
-        heightSuccessLbl.setVisible(false);
-        weightSuccessLbl.setVisible(false);
     }
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
@@ -616,14 +548,16 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
     private void confirmPasswordTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_confirmPasswordTxtKeyReleased
         // TODO add your handling code here:
         if (confirmPasswordTxt.getText().equals(txtPassword.getText()) && !confirmPasswordTxt.getText().isEmpty()) {
-            confirmPasswordSuccessLbl.setVisible(true);
             confirmPasswordLbl.setVisible(false);
+            acceptableInput(confirmPasswordTxt);
         } else if (confirmPasswordTxt.getText().isEmpty()) {
             confirmPasswordLbl.setVisible(false);
-            confirmPasswordSuccessLbl.setVisible(false);
+            nonAcceptableInput(confirmPasswordTxt);
+
         } else {
             confirmPasswordLbl.setVisible(true);
-            confirmPasswordSuccessLbl.setVisible(false);
+            nonAcceptableInput(confirmPasswordTxt);
+
         }
     }//GEN-LAST:event_confirmPasswordTxtKeyReleased
 
@@ -637,13 +571,11 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
                 invalidAgeLbl.setVisible(true);
                 ageValid = false;
                 ageBandLbl.setVisible(false);
-                AgeSuccessLbl.setVisible(false);
                 return;
             } else {
                 invalidAgeLbl.setVisible(false);
                 ageValid = false;
                 ageBandLbl.setVisible(false);
-                AgeSuccessLbl.setVisible(false);
                 return;
             }
         }
@@ -651,12 +583,12 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
             ageBandLbl.setVisible(true);
             ageValid = false;
             invalidAgeLbl.setVisible(false);
-            AgeSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtAge);
         } else {
             invalidAgeLbl.setVisible(false);
             ageBandLbl.setVisible(false);
             ageValid = true;
-            AgeSuccessLbl.setVisible(true);
+            acceptableInput(txtAge);
         }
     }//GEN-LAST:event_txtAgeKeyReleased
 
@@ -664,13 +596,13 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if (!namePatternCorrect(txtName.getText()) && !(txtName.getText().isEmpty())) {
             nameLbl.setVisible(true);
-            nameSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtName);
         } else if (txtName.getText().isEmpty()) {
             nameLbl.setVisible(false);
-            nameSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtName);
         } else {
             nameLbl.setVisible(false);
-            nameSuccessLbl.setVisible(true);
+            acceptableInput(txtName);
         }
     }//GEN-LAST:event_txtNameKeyReleased
 
@@ -679,21 +611,22 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         if (!usernamePatternCorrect(txtEmail.getText()) && !(txtEmail.getText().isEmpty()) && system.getStudentDirectory().checkIfUsernameIsUnique(txtEmail.getText())) {
             emailLbl.setVisible(true);
             emailIDAlreadyLbl.setVisible(false);
-            emailSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtEmail);
+            
             emailValid = false;
         } else if (txtEmail.getText().isEmpty()) {
             emailLbl.setVisible(false);
             emailIDAlreadyLbl.setVisible(false);
+            nonAcceptableInput(txtEmail);
             emailValid = false;
-            emailSuccessLbl.setVisible(false);
         } else if (!system.getStudentDirectory().checkIfUsernameIsUnique(txtEmail.getText())) {
             emailIDAlreadyLbl.setVisible(true);
-            emailSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtEmail);
             emailValid = false;
         } else {
             emailLbl.setVisible(false);
             emailIDAlreadyLbl.setVisible(false);
-            emailSuccessLbl.setVisible(true);
+            acceptableInput(txtEmail);
             emailValid = true;
         }
     }//GEN-LAST:event_txtEmailKeyReleased
@@ -701,45 +634,46 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
     private void txtPasswordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyReleased
         // TODO add your handling code here:
         if (!passwordPatternCorrect(txtPassword.getText()) && !(txtPassword.getText().isEmpty())) {
-            passwordSuccessLbl.setVisible(false);
             passwordLbl.setVisible(true);
+            nonAcceptableInput(txtPassword);
         } else if (txtPassword.getText().isEmpty()) {
             passwordLbl.setVisible(false);
-            passwordSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtPassword);
         } else {
             passwordLbl.setVisible(false);
-            passwordSuccessLbl.setVisible(true);
+            acceptableInput(txtPassword);
         }
     }//GEN-LAST:event_txtPasswordKeyReleased
 
     private void txtAdressKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAdressKeyReleased
         // TODO add your handling code here:
         if (!addressPatternCorrect(txtAdress.getText()) && !(txtAdress.getText().isEmpty())) {
-            addressSuccessLbl.setVisible(false);
             addressLbl.setVisible(true);
+            nonAcceptableInput(txtAdress);
         } else if (txtAdress.getText().isEmpty()) {
             addressLbl.setVisible(false);
-            addressSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtAdress);
+
         } else {
             addressLbl.setVisible(false);
-            addressSuccessLbl.setVisible(true);
+            acceptableInput(txtAdress);
         }
     }//GEN-LAST:event_txtAdressKeyReleased
 
     private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
         // TODO add your handling code here:
         if (!cityPatternCorrect(txtCity.getText()) && !(txtCity.getText().isEmpty())) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(true);
+            nonAcceptableInput(txtCity);
             cityValid = false;
         } else if (txtCity.getText().isEmpty()) {
-            citySuccessLbl.setVisible(false);
             cityLbl.setVisible(false);
+            nonAcceptableInput(txtCity);
             cityValid = false;
         } else {
             cityValid = true;
             cityLbl.setVisible(false);
-            citySuccessLbl.setVisible(true);
+            acceptableInput(txtCity);
         }
     }//GEN-LAST:event_txtCityKeyReleased
 
@@ -750,23 +684,23 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
             zip = Integer.parseInt(txtZipcode.getText());
             if (zip == 0) {
                 zipLbl.setVisible(false);
-                zipSuccessLbl.setVisible(false);
                 zipValid = false;
+                nonAcceptableInput(txtZipcode);
             }
             zipValid = true;
-            zipSuccessLbl.setVisible(true);
             zipLbl.setVisible(false);
+            acceptableInput(txtZipcode);
             return;
         } catch (NumberFormatException e) {
             if (!txtZipcode.getText().isEmpty()) {
                 zipValid = false;
-                zipSuccessLbl.setVisible(false);
                 zipLbl.setVisible(true);
+                nonAcceptableInput(txtZipcode);
                 return;
             } else {
                 zipValid = false;
                 zipLbl.setVisible(false);
-                zipSuccessLbl.setVisible(false);
+                acceptableInput(txtZipcode);
                 return;
             }
         }
@@ -776,32 +710,30 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int height = 0;
         if (txtHeight.getText().isEmpty()) {
-            heightSuccessLbl.setVisible(false);
             heightLbl.setVisible(false);
+            nonAcceptableInput(txtHeight);
         }
         try {
             height = Integer.parseInt(txtHeight.getText());
         } catch (NumberFormatException e) {
             if (!txtHeight.getText().isEmpty()) {
                 heightValid = false;
-                heightSuccessLbl.setVisible(false);
                 heightLbl.setVisible(true);
                 return;
             } else {
                 heightValid = false;
                 heightLbl.setVisible(false);
-                heightSuccessLbl.setVisible(false);
                 return;
             }
         }
         if (txtHeight.getText().length() > 3 || txtHeight.getText().length() < 3) {
             heightValid = false;
             heightLbl.setVisible(true);
-            heightSuccessLbl.setVisible(false);
+            nonAcceptableInput(txtHeight);
         } else {
             heightValid = true;
             heightLbl.setVisible(false);
-            heightSuccessLbl.setVisible(true);
+            acceptableInput(txtHeight);
         }
     }//GEN-LAST:event_txtHeightKeyReleased
 
@@ -809,32 +741,28 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int weight = 0;
         if (txtWeight.getText().isEmpty()) {
-            weightSuccessLbl.setVisible(false);
             weightLbl.setVisible(false);
+            nonAcceptableInput(txtHeight);
         }
         try {
             weight = Integer.parseInt(txtWeight.getText());
         } catch (NumberFormatException e) {
             if (!txtWeight.getText().isEmpty()) {
                 weightValid = false;
-                weightSuccessLbl.setVisible(false);
                 weightLbl.setVisible(true);
                 return;
             } else {
                 weightValid = false;
                 weightLbl.setVisible(false);
-                weightSuccessLbl.setVisible(false);
                 return;
             }
         }
         if (weight > 200) {
             weightValid = false;
             weightLbl.setVisible(true);
-            weightSuccessLbl.setVisible(false);
         } else {
             weightValid = true;
             weightLbl.setVisible(false);
-            weightSuccessLbl.setVisible(true);
         }
     }//GEN-LAST:event_txtWeightKeyReleased
 
@@ -850,29 +778,29 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
 
+    private void acceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(204,255,204));
+    }
+    
+    private void nonAcceptableInput(JTextField txt){
+        txt.setBackground(new java.awt.Color(255,153,153));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AgeSuccessLbl;
     private javax.swing.JLabel addressLbl;
-    private javax.swing.JLabel addressSuccessLbl;
     private javax.swing.JLabel ageBandLbl;
     private javax.swing.JLabel cityLbl;
-    private javax.swing.JLabel citySuccessLbl;
     private javax.swing.JLabel confirmPasswordLbl;
-    private javax.swing.JLabel confirmPasswordSuccessLbl;
     private javax.swing.JPasswordField confirmPasswordTxt;
     private javax.swing.JLabel emailIDAlreadyLbl;
     private javax.swing.JLabel emailLbl;
-    private javax.swing.JLabel emailSuccessLbl;
     private javax.swing.JLabel heightLbl;
-    private javax.swing.JLabel heightSuccessLbl;
     private javax.swing.JLabel invalidAgeLbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -880,14 +808,10 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel nameLbl;
-    private javax.swing.JLabel nameSuccessLbl;
     private javax.swing.JComboBox networkJComboBox;
     private javax.swing.JLabel passwordLbl;
-    private javax.swing.JLabel passwordSuccessLbl;
     private javax.swing.JRadioButton radioFemale;
     private javax.swing.JRadioButton radioMale;
     private javax.swing.JButton resetBtn;
@@ -902,8 +826,6 @@ public class CreateNewStudentJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtWeight;
     private javax.swing.JTextField txtZipcode;
     private javax.swing.JLabel weightLbl;
-    private javax.swing.JLabel weightSuccessLbl;
     private javax.swing.JLabel zipLbl;
-    private javax.swing.JLabel zipSuccessLbl;
     // End of variables declaration//GEN-END:variables
 }

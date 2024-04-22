@@ -50,8 +50,6 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         generalBtn = new javax.swing.JButton();
         physioBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
         rightJPanel = new javax.swing.JPanel();
 
@@ -60,10 +58,10 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         jSplitPane1.setDividerLocation(80);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel1.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        generalBtn.setBackground(new java.awt.Color(204, 204, 204));
+        generalBtn.setBackground(new java.awt.Color(102, 255, 255));
         generalBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         generalBtn.setForeground(new java.awt.Color(51, 51, 51));
         generalBtn.setText("General Practitioner");
@@ -74,7 +72,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(generalBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 156, 35));
 
-        physioBtn.setBackground(new java.awt.Color(204, 204, 204));
+        physioBtn.setBackground(new java.awt.Color(102, 255, 255));
         physioBtn.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         physioBtn.setForeground(new java.awt.Color(51, 51, 51));
         physioBtn.setText("Physiotherapist");
@@ -85,13 +83,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(physioBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 156, 35));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/gneralPrac.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 30, 40));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/images/physio.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, 40));
-
-        backJButton.setBackground(new java.awt.Color(204, 204, 204));
+        backJButton.setBackground(new java.awt.Color(102, 255, 255));
         backJButton.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         backJButton.setForeground(new java.awt.Color(51, 51, 51));
         backJButton.setText("<< Back");
@@ -104,7 +96,7 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        rightJPanel.setBackground(new java.awt.Color(51, 51, 51));
+        rightJPanel.setBackground(new java.awt.Color(0, 102, 102));
         rightJPanel.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(rightJPanel);
 
@@ -137,8 +129,6 @@ public class DoctorAppointmentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JButton generalBtn;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton physioBtn;
